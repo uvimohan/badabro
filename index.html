@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Bootstrap CSS -->
+	<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	<link href="/css/style.css" rel="stylesheet">
+
+	<title>Badabro</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container-fluid">
+			<a class="navbar-brand">Badabro</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarText">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<!-- <li class="nav-item">
+						<a class="nav-link active" title="Weightage Calculation">Weightage Calculation</a>
+					</li> -->
+					<li class="nav-item">
+						<a class="nav-link" title="Restaurant assingn based on Ratings">Restaurant</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" title="Staff collection report">Staff Report</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" title="Bar Chart Based on Profile">Chart Profile</a>
+					</li>
+				</ul>				
+			</div>
+		</div>
+	</nav>
+	<div class="container-fluid MainContainer">		
+		<!-- <div class="menuContent" id="weightage_calculation_content">
+			<h2>Weightage Calculation</h2>
+		</div> -->
+		<div class="menuContent showContent" id="restaurant_content">			
+			<h2>Restaurant Customer</h2>
+			<div class="row CustomerInputRow">
+				<div class="col-sm-12 col-md-3 col-lg-3">
+					<label for="exampleFormControlInput1" class="form-label">Name</label>
+					<input type="text" class="form-control" id="customerName" placeholder="Enter name">
+				</div>
+			</div>
+			<div class="row CustomerInputRow">
+				<div class="col-sm-12 col-md-3 col-lg-3">
+					<label for="exampleFormControlTextarea1" class="form-label">Rating</label>
+					<input type="range" class="form-range" min="1" max="5" id="customerRating">
+				</div>
+			</div>
+			<div class="row CustomerInputRow">
+				<div class="col-12">
+					<button id="submitContact" type="submit" class="btn btn-primary mb-3">Submit</button>
+				  </div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<table id="customerAndServerTable" class="table table-bordered caption-top">
+						<caption>List of users</caption>
+						<thead>
+							<tr>								
+								<th scope="col">Server 10</th>
+								<th class="col">Server 9</th>
+								<th class="col">Server 8</th>
+								<th class="col">Server 7</th>
+								<th class="col">Server 6</th>
+								<th class="col">Server 5</th>
+								<th class="col">Server 4</th>
+								<th class="col">Server 3</th>
+								<th class="col">Server 2</th>
+								<th class="col">Server 1</th>								
+							</tr>
+						</thead>
+						<tbody  id="customerAndServerTableBody">
+							<tr id="noRecordsRow" align="center"><td colspan="10">No records found!</td></tr>
+						</tbody>	
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="menuContent" id="staff_report_content">
+			<h2>Staff Report</h2>
+			<div class="row CustomerInputRow">
+				<div class="col-sm-12 col-md-3 col-lg-3">
+					<label for="exampleFormControlInput1" class="form-label">Profile</label>
+					<select class="form-select" id="staffSelection">
+						<option value="staff_1" selected>Staff 1</option>
+						<option value="staff_2">Staff 2</option>
+						<option value="staff_3">Staff 3</option>
+						<option value="staff_4">Staff 4</option>
+					</select>
+				</div>
+			</div>
+			<div id="chart_div"></div>
+		</div>
+		<div class="menuContent" id="chart_profile_content">
+			<h2>Chart Profile</h2>
+			<div class="row CustomerInputRow">
+				<div class="col-sm-12 col-md-3 col-lg-3">
+					<label for="exampleFormControlInput1" class="form-label">Upload Excel</label>
+					<input type="file" class="form-control" id="xlxInput" accept=".xlsx" />
+				</div>
+			</div>
+			<div class="FillerGap"></div>
+			<div class="row CustomerInputRow">
+				<div class="col-sm-12 col-md-6 col-lg-6">
+					<div id="profile_chart_div"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script src="/bootstrap/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/jszip.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.js"></script>
+	<script src="/js/profile.js"></script>
+	<script src="/js/events.js"></script>
+	<script src="/js/restaraunts.js"></script>
+	<script src="/js/staff.js"></script>
+</body>
+</html>

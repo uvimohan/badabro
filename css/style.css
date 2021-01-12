@@ -1,0 +1,27 @@
+.navbar-brand {
+    user-select: none;
+}
+.nav-link {
+    cursor: pointer;
+    user-select: none;
+}
+.MainContainer {
+    margin: 10px 0;
+}
+
+.menuContent {
+    display: none;
+}
+
+.showContent {
+    display: block;
+}
+
+.CustomerInputRow {
+    margin: 10px 0;
+}
+
+.FillerGap {
+    clear: both;
+    height: 50px;
+}
